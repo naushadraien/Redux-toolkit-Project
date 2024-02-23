@@ -20,7 +20,7 @@ export const getAllUsers = createAsyncThunk('getAllUsers', async(data, {rejectWi
 export const getAllData = createAsyncThunk('getAllData', async(data,{rejectWithValue})=>{
     const response = await fetch ('https://64475d2650c253374423253d.mockapi.io/crud')
     try {
-        // console.log(response);
+        console.log('res',response);
         return await response.json();
     } catch (error) {
         return rejectWithValue(error.response);
